@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
-  // Get the productId from the URL params
+ 
   const { productId } = useParams();
 
-  // Get the product details from the Redux store
+ 
   const product = useSelector(state =>
     state.products.products.find(product => product.id === parseInt(productId))
   );
@@ -23,7 +23,7 @@ const ProductDetails = () => {
             <img
               src="https://flowbite.com/docs/images/logo.svg"
               className="h-8 mr-3"
-              alt="Flowbite Logo"
+              alt="Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               FlixCart
