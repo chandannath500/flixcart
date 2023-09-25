@@ -56,7 +56,11 @@ const Home = () => {
   };
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return (<div class="flex items-center justify-center space-x-2 animate-bounce mt-96">
+    <div class="w-8 h-8 bg-blue-400 rounded-full"></div>
+    <div class="w-8 h-8 bg-green-400 rounded-full"></div>
+    <div class="w-8 h-8 bg-black rounded-full"></div>
+</div>)
   }
 
   if (status === 'failed') {
@@ -65,7 +69,7 @@ const Home = () => {
 
   return (
     <>
-      <nav className="bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-gray-200 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href='/' className="flex items-center">
             <img
@@ -73,7 +77,7 @@ const Home = () => {
               className="h-8 mr-3"
               alt="Flowbite Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
               FlixCart
             </span>
           </a>
@@ -109,7 +113,7 @@ const Home = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white w-96 p-6 rounded-lg shadow-md">
+          <div className="bg-slate-600 w-96 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">Add Product</h2>
             <input
               type="text"
@@ -155,7 +159,7 @@ const Home = () => {
             >
               Submit
             </button>
-            <button onClick={handleCloseModal} className="text-blue-700 hover:underline ml-2">
+            <button onClick={handleCloseModal} className="bg-blue-700 text-white hover:bg-blue-800 py-2 px-4 rounded-lg ml-2">
               Cancel
             </button>
           </div>
