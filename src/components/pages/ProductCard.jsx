@@ -9,7 +9,6 @@ const ProductCard = ({ product }) => {
     event.preventDefault();
     dispatch(deleteProduct(product.id));
   };
-
   return (
     <div className="w-96 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-2 md:ml-6 md:mt-2">
       <img
