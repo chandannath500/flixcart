@@ -29,8 +29,7 @@ const Home = () => {
   };
 
   const handleCloseModal = () => {
-    setIsModalOpen(false);
-    // Reset form fields
+    setIsModalOpen(false);  
     setFormData({
       image: '',
       title: '',
@@ -48,9 +47,7 @@ const Home = () => {
   };
 
   const handleFormSubmit = () => {
-    // Dispatch action to add the product with formData
     dispatch(addProduct(formData));
-    // Close the modal and reset form fields
     handleCloseModal();
   };
 
